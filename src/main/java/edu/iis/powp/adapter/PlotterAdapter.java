@@ -43,3 +43,8 @@ public class PlotterAdapter extends DrawPanelController implements IPlotter
         return "Simulator";
     }
 }
+/*  3.2.5*
+	Z adaptera korzystamy w sytuacji, gdy chcemy umożliwić współpracę między klasami o różnych interfejsach (niekompatybilnych).
+	Adapter jest łącznikiem między tymi klasami, tak jak w tym przypadku adapter łączy i umożliwia współpracę między
+		IPlotter oraz DrawPanelController.
+ */
