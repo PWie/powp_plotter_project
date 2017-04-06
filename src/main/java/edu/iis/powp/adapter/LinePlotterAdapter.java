@@ -30,7 +30,6 @@ public class LinePlotterAdapter implements IPlotter {
 	@Override
 	public void drawTo(int x, int y)
 	{
-		line = LineFactory.getBasicLine();
 		line.setStartCoordinates(this.startX, this.startY);
 		line.setEndCoordinates(x, y);
 

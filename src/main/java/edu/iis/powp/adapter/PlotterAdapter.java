@@ -10,15 +10,15 @@ import edu.kis.powp.drawer.shape.LineFactory;
 /**
  * Plotter adapter to drawer.
  */
-public class PlotterAdapter extends DrawPanelController implements IPlotter
+public class PlotterAdapter implements IPlotter
 { 
+	private DrawPanelController controller;
 	private int startX = 0, startY = 0;
-	
-    public PlotterAdapter(Context context) {
-		super();
-		this.initialize(context.getFreePanel());
+
+	public PlotterAdapter(DrawPanelController controller) {
+		this.controller = controller;
 	}
-    
+
 	@Override
     public void setPosition(int x, int y)
     {
@@ -33,7 +33,7 @@ public class PlotterAdapter extends DrawPanelController implements IPlotter
     	line.setStartCoordinates(this.startX, this.startY);
         line.setEndCoordinates(x, y);
 
-		drawLine(line);
+		controller.drawLine(line);
 		setPosition(x, y);
     }
 
