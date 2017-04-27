@@ -32,9 +32,13 @@ public class TestPlotSoftPatterns
 	private static void setupPresetTests(Context context) {
 	    SelectTestFigureOptionListener selectTestFigureOptionListener1 = new SelectTestFigureOptionListener(1);
 	    SelectTestFigureOptionListener selectTestFigureOptionListener2 = new SelectTestFigureOptionListener(2);
+		SelectTestFigureOptionListener selectTestFigureOptionListener3 = new SelectTestFigureOptionListener(3);
+		SelectTestFigureOptionListener selectTestFigureOptionListener4 = new SelectTestFigureOptionListener(4);
 
 		context.addTest("Figure Joe 1", selectTestFigureOptionListener1);
 		context.addTest("Figure Joe 2", selectTestFigureOptionListener2);
+		context.addTest("Command Square", selectTestFigureOptionListener3);
+		context.addTest("Command Triangle", selectTestFigureOptionListener4);
 	}
 
 	/**
@@ -101,6 +105,7 @@ public class TestPlotSoftPatterns
             	setupDrivers(context);
             	setupPresetTests(context);
             	setupLogger(context);
+
             }
 
         });
